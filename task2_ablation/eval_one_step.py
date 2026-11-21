@@ -1,8 +1,8 @@
 """Task 2: one-step comparison of pretrained LGNO FULL and NO-C.
 
 Run from the repository root:
-    python .\task2_ablation\eval_one_step.py --problem PureConvection
-    python .\task2_ablation\eval_one_step.py --problem Burgers
+    python task2_ablation/eval_one_step.py --problem PureConvection
+    python task2_ablation/eval_one_step.py --problem Burgers
 
 FULL and NO-C use the same architecture, checkpoint, and test dataset.
 The `without_coupling` context manager zeros only the c^ell channels

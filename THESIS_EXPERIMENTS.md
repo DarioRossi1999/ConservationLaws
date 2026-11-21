@@ -126,3 +126,23 @@ The evaluator also accepts `--full-checkpoint` to override the pretrained model 
 Only the thesis scripts and documentation are included in these extensions. Checkpoints, datasets, generated CSV/NPZ files, plots, and experiment outputs remain excluded. An optional piecewise-constant Burgers experiment and subsequent CPU/GPU optimization studies are not part of this initial documented release.
 
 The underlying LGNO implementation originates from the authors of **LGNO: A Local--Global Neural Operator for Hyperbolic Conservation Laws**. The original paper citation and the repository's license are retained in the main README and `LICENSE` file.
+
+
+## Dataset regeneration and verification
+
+The original dataset generators are `Burgers/dataset/data.py` and `PureConvection/dataset/data.py`.
+
+Example commands for generating the Task 4A dataset sizes in new directories:
+
+```bash
+python Burgers/dataset/data.py --out_dir task4_finetuning/datasets/Burgers_regenerated --n_train 200 --n_val 40 --n_test 20 --T 1 --dt_snap 0.05 --seed 20261110
+python PureConvection/dataset/data.py --out_dir task4_finetuning/datasets/PureConvection_regenerated --n_train 200 --n_val 40 --n_test 20 --dt_snap 0.05 --n_steps_per_ic 20 --seed 20261110
+```
+
+These settings are consistent with the named historical dataset directories, but exact numerical identity has not been verified.
+
+### Local execution checks
+
+CPU checks completed successfully: Task 2 one-step and rollout for both PDEs; Burgers shock detection and near/far analysis; Task 3 branch analysis and comparison for both PDEs; Task 4A checkpoint evaluation for both PDEs; one-epoch PureConvection training; and small dataset generation tests for both PDEs.
+
+These checks do not reproduce every historical training run or establish bitwise identity with the original datasets.

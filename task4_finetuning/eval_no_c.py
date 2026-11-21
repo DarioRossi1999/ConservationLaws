@@ -5,7 +5,7 @@ Compare teacher-forced one-step errors, free rollouts and periodic TV.
 Keep the CSV, figures and trajectory formats used in Report 1.
 
 Example (from the repository root):
-    python .\task4_finetuning\eval_no_c.py --problem PureConvection --outdir .\task4_finetuning\results\new_evaluation
+    python task4_finetuning/eval_no_c.py --problem PureConvection --outdir task4_finetuning/results/new_evaluation
 """
 
 from __future__ import annotations
