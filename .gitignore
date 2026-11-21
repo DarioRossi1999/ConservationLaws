@@ -1,0 +1,31 @@
+# Python temporary files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local Python environments
+.venv/
+venv/
+
+# Local secrets and logs
+.env
+.env.*
+*.log
+
+# Generated model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Task 2: generated experimental outputs
+/task2_ablation/results/
+/task2_ablation/figures/
+
+# Task 3: generated experimental outputs
+/task3_analysis/results/
+
+# Task 4: generated datasets and outputs
+/task4_finetuning/datasets/
+/task4_finetuning/results/
+/task4_finetuning/checkpoints/

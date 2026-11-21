@@ -195,6 +195,27 @@ cd ..
 Individual benchmark directories also provide `eval_time.py` scripts for timing
 experiments.
 
+## Thesis Extensions
+
+For detailed experiment and reproducibility instructions, see [Thesis Experiments](THESIS_EXPERIMENTS.md).
+
+This fork preserves the original LGNO implementation and adds
+experimental scripts developed for a master's thesis on the
+one-dimensional Burgers and PureConvection benchmarks.
+
+- `task2_ablation/`: post-training removal of the multiplicative
+  coupling, FULL/NO-C evaluation, and shock-region analysis.
+- `task3_analysis/`: analysis of LGNO weights, branch contributions,
+  spatial contrasts, and bootstrap uncertainty.
+- `task4_finetuning/`: mixer-only fine-tuning of the NO-C model
+  and evaluation of the resulting checkpoints.
+
+Task 1 uses the original evaluation programs in `Burgers/`
+and `PureConvection/`.
+
+Generated datasets, fine-tuned checkpoints, and experimental
+results are not included in these additional directories.
+
 ## Citation
 
 ```bibtex
